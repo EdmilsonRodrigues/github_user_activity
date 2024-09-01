@@ -25,7 +25,11 @@ async def test_fail_get_github_activity_2():
 async def test_get_github_activity(username):
     github_activity.argv = ["github_activity", username]
     assert await github_activity.get_activity() is not None
-    assert list((await github_activity.get_activity()).keys()) == ["others", "commits", "issue"]
+    assert list((await github_activity.get_activity()).keys()) == [
+        "others",
+        "commits",
+        "issue",
+    ]
 
 
 """

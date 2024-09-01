@@ -44,7 +44,9 @@ def get_categorized_activities(activities: list[dict[str, dict[str, str]]]):
 def print_categorized_activities(categorized_activites: dict[str, dict | list]):
     print("Output:")
     for commit in categorized_activites["commits"]:
-        print(f"- Pushed {categorized_activites["commits"][commit]} commits to {commit}")
+        print(
+            f"- Pushed {categorized_activites["commits"][commit]} commits to {commit}"
+        )
     for issue in categorized_activites["issue"]:
         print(f"- Opened {categorized_activites["issue"][issue]} new issue in {issue}")
 
